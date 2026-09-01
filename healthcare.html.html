@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV DEVS | Dubai Healthcare & MedTech Event Intelligence (Sep 1 – Oct 10)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        medical: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        .ai-prose h3 { font-weight: 700; font-size: 1.05rem; margin-top: 1rem; margin-bottom: 0.5rem; color: #134e4a; }
+        .ai-prose h4 { font-weight: 600; font-size: 0.95rem; margin-top: 0.75rem; margin-bottom: 0.35rem; color: #0f766e; }
+        .ai-prose p { margin-bottom: 0.6rem; line-height: 1.5; }
+        .ai-prose ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 0.75rem; }
+        .ai-prose li { margin-bottom: 0.25rem; }
+        .ai-prose strong { font-weight: 600; color: #0f172a; }
+        .ai-prose blockquote { border-left: 3px solid #0d9488; padding-left: 0.75rem; margin: 0.75rem 0; font-style: italic; background: #f0fdfa; padding-top: 0.3rem; padding-bottom: 0.3rem; border-radius: 0 0.375rem 0.375rem 0; }
+        .modal-blur { backdrop-filter: blur(4px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Toast Notification Banner -->
+    <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white text-xs px-4 py-3 rounded-lg shadow-xl border border-slate-700 flex items-center space-x-2">
+        <span>📋</span>
+        <span id="toastMessage">Text copied to clipboard!</span>
+    </div>
+
+    <!-- Top Header -->
+    <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-md border-b border-teal-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="bg-brand-600 text-white text-xs font-extrabold px-2.5 py-1 rounded tracking-wider uppercase">AV DEVS HEALTHCARE</span>
+                <h1 class="text-lg font-bold text-slate-100 hidden md:block">Dubai Healthcare, MedTech & Digital Health Events</h1>
+                <span class="text-xs bg-slate-800 text-teal-300 px-2 py-1 rounded border border-teal-700/50">Sep 1 – Oct 10</span>
+            </div>
+            <nav class="flex space-x-2 text-xs md:text-sm font-medium">
+                <a href="#overview" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-300 hover:text-white transition">Strategic Overview</a>
+                <a href="#ai-health-copilot" class="px-3 py-1.5 rounded-md bg-brand-600 hover:bg-brand-700 text-white font-semibold transition">✨ Healthcare AI Copilot</a>
+                <a href="#health-events" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-300 hover:text-white transition">Event Matrix</a>
+                <a href="#health-logistics" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-300 hover:text-white transition">DIC Travel Hub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
+
+        <!-- SECTION 1: HEALTHCARE COMMERCIAL CONTEXT -->
+        <section id="overview" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <div class="border-b border-slate-100 pb-4 mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Healthcare, MedTech & Life Sciences Pipeline</h2>
+                    <p class="text-sm text-slate-600 mt-1">
+                        High-yield medical expos, clinical conferences, aesthetic summits, and pharma-tech meetings in Dubai from <strong>September 1 to October 10</strong>.
+                    </p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
+                        ● Hub: Dubai International City (DIC)
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        Vadodara Team (<$25/hr Devs)
+                    </span>
+                </div>
+            </div>
+
+            <!-- Context Overview -->
+            <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                The GCC healthcare and wellness digital transformation market is accelerating rapidly, with UAE institutions complying with <strong>NABIDH (Dubai Health Authority HIE)</strong>, <strong>Malaffi (Abu Dhabi)</strong>, and global <strong>HIPAA</strong> standards. For <strong>AV DEVS</strong>, these healthcare events represent fertile ground to pitch custom Telehealth platforms, clinic EHR/EMR workflow software, AI-assisted radiology/diagnostic tooling, medical IoT dashboards, and Penetration Testing for medical records security at <strong>&lt;$25/hr rates</strong>.
+            </p>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Healthcare Events</div>
+                    <div class="text-2xl font-extrabold text-slate-900 mt-1">6 Dedicated Expos</div>
+                    <div class="text-xs text-brand-600 mt-1">Dermatology, Pharma, AI Health, ICU</div>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Medical Delegates</div>
+                    <div class="text-2xl font-extrabold text-slate-900 mt-1">32,000+</div>
+                    <div class="text-xs text-medical-600 mt-1">Doctors, Hospital Execs, Vendors</div>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Primary Venues</div>
+                    <div class="text-2xl font-extrabold text-slate-900 mt-1">DWTC & Hotels</div>
+                    <div class="text-xs text-purple-600 mt-1">InterCon Festival City, Habtoor, DWTC</div>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">DIC Travel Range</div>
+                    <div class="text-2xl font-extrabold text-slate-900 mt-1">16 – 25 km</div>
+                    <div class="text-xs text-amber-600 mt-1">AED 45 – 75 Taxi (~20-28 min)</div>
+                </div>
+            </div>
+
+            <!-- Health Tech Capabilities Bar -->
+            <div class="mt-6 pt-5 border-t border-slate-100">
+                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">AV DEVS Healthcare Solution Strengths</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 bg-teal-50 text-teal-800 text-xs font-medium rounded-md border border-teal-200">HIPAA & NABIDH Compliant Architecture</span>
+                    <span class="px-2.5 py-1 bg-blue-50 text-blue-800 text-xs font-medium rounded-md border border-blue-200">Telehealth & Doctor Video Consultation Apps (Flutter/React Native)</span>
+                    <span class="px-2.5 py-1 bg-indigo-50 text-indigo-800 text-xs font-medium rounded-md border border-indigo-200">Custom EHR/EMR Integration & Clinic CRM</span>
+                    <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 text-xs font-medium rounded-md border border-emerald-200">Medical IoT & Diagnostic Monitor Dashboards</span>
+                    <span class="px-2.5 py-1 bg-rose-50 text-rose-800 text-xs font-medium rounded-md border border-rose-200">Penetration Testing & Patient Record SecOps</span>
+                    <span class="px-2.5 py-1 bg-amber-50 text-amber-800 text-xs font-medium rounded-md border border-amber-200">Dedicated Dev Squads &lt;$25/hr</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: GEMINI HEALTHCARE AI COPILOT -->
+        <section id="ai-health-copilot" class="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 rounded-xl shadow-lg border border-teal-800/80 p-6 text-white">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/80 pb-4 mb-6">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <span class="px-2.5 py-1 rounded bg-teal-500/30 text-teal-300 border border-teal-400/40 text-xs font-bold uppercase tracking-wider">Gemini 2.5 Healthcare Engine</span>
+                        <h2 class="text-xl font-bold text-white">✨ MedTech & Healthcare Sales AI Copilot</h2>
+                    </div>
+                    <p class="text-xs text-slate-300 mt-1">
+                        Generate instant medical software battlecards, NABIDH/HIPAA compliance pitches, and tailored hospital proposal emails.
+                    </p>
+                </div>
+                <div class="flex space-x-2 bg-slate-800/90 p-1 rounded-lg border border-slate-700 text-xs">
+                    <button id="tabBtnHealthPitch" onclick="switchHealthTab('pitch')" class="px-3 py-1.5 rounded-md font-semibold bg-brand-600 text-white shadow-sm transition">
+                        ✨ Clinical Battlecard
+                    </button>
+                    <button id="tabBtnHealthProposal" onclick="switchHealthTab('proposal')" class="px-3 py-1.5 rounded-md font-semibold text-slate-300 hover:text-white transition">
+                        ✨ HealthTech SOW & Sizing
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 1: CLINICAL BATTLECARD -->
+            <div id="healthTabPitch" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Target Healthcare Event</label>
+                        <select id="aiHealthEventSelect" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            <option value="Dubai Derma (Dermatology, Aesthetics & Clinic Booking Systems)">Dubai Derma (Aesthetics, Clinics, Tele-Derm)</option>
+                            <option value="Pharmaconex Middle East / CPhI ME (Pharma Supply Chain & Clinical Trial SaaS)">Pharmaconex / CPhI ME (Pharma Tech & Supply Chain)</option>
+                            <option value="Precision Medicine & Digital Oncology Summit (Genomics, AI Diagnostics & EHR)">Precision Medicine & Oncology Summit (AI Diagnostics)</option>
+                            <option value="Critical Care & Emergency Medicine Conference (ICU Telemetry & IoT Portals)">Critical Care Summit (ICU Telemetry & Real-Time Dashboards)</option>
+                            <option value="GCC Healthcare Innovation & Hospital Tech Congress (EHR, NABIDH, Patient Portals)">GCC Hospital Tech Congress (NABIDH / Hospital EHR)</option>
+                            <option value="Middle East Dental & Aesthetics Expo (Dental Practice CRM & Imaging Software)">Dental & Aesthetics Expo (Practice Management & Imaging)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Prospect Profile / Medical Organization</label>
+                        <input type="text" id="aiHealthProspect" placeholder="e.g. Multi-specialty Clinic Network needing mobile appointment app" value="Aesthetic Clinic Group needing Tele-Consultation & Booking Mobile App" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Target Healthcare Stakeholder</label>
+                        <select id="aiHealthPersona" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            <option value="Chief Medical Officer (CMO) / Medical Director (Focus on clinical workflow & patient safety)">CMO / Medical Director (Clinical Workflow)</option>
+                            <option value="Hospital CIO / Head of Health Informatics (Focus on NABIDH/EMR integration, latency & security)">Hospital CIO / IT Director (EHR / Compliance)</option>
+                            <option value="Clinic Managing Director / Founder (Focus on patient acquisition, booking conversions & ROI)">Clinic Owner / MD (Revenue & ROI)</option>
+                            <option value="HealthTech Startup Founder (Focus on rapid MVP build, Flutter apps & <$25/hr runway)">HealthTech Founder (Rapid MVP Build)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                    <span class="text-xs text-slate-400">Generates 30-sec clinical hook, 3 diagnostic questions, compliance objection counters & follow-up template.</span>
+                    <button onclick="generateHealthBattlecard()" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg text-xs shadow-md transition flex items-center space-x-1.5">
+                        <span>✨ Generate Healthcare Battlecard</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 2: HEALTHTECH PROPOSAL -->
+            <div id="healthTabProposal" class="hidden space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Medical Client & Facility</label>
+                        <input type="text" id="aiHealthClient" placeholder="e.g. Dr. Zaid, PrimeCare Dubai" value="Dr. Tariq, Prime Aesthetics Jumeirah" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Target Healthcare Tech Scope</label>
+                        <input type="text" id="aiHealthScope" placeholder="e.g. Telehealth Video Mobile App + WhatsApp Bot + EHR" value="Patient Telehealth App (Flutter) + EMR Connector + Pen Testing" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Recommended Pod Model</label>
+                        <select id="aiHealthPod" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            <option value="2 Dedicated Full-Stack Mobile/Web Engineers (<$25/hr) + QA">Dedicated Pod: 2 Devs + 1 QA (<$25/hr)</option>
+                            <option value="Fixed-Milestone Telehealth MVP (8-Week Sprint)">Fixed-Price Telehealth MVP (8 Weeks)</option>
+                            <option value="Healthcare Penetration Testing & Patient Record Vulnerability Audit">HIPAA / Patient Record Pen-Testing Package</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-slate-300 font-semibold text-xs mb-1">Meeting Notes / Pain Points Discussed at Conference</label>
+                    <textarea id="aiHealthNotes" rows="3" class="w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-lg p-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="e.g. Clinic suffers high no-show rates. Current web portal is clunky on iOS. Wants automated SMS/WhatsApp reminders, encrypted video calls, and credit card payments.">Met at Dubai Derma booth #210. Client runs 3 premium cosmetic clinics in Dubai & Abu Dhabi. Patients dropping off during booking. Needs custom iOS/Android mobile app with seamless before/after photo galleries, video consultations, and integration with their existing clinic CRM. Wants deployment within 60 days and full code ownership under NDA.</textarea>
+                </div>
+
+                <div class="flex items-center justify-between pt-1">
+                    <span class="text-xs text-slate-400">Structured into Executive Clinical Summary, Architecture, Sizing & Proposal Email.</span>
+                    <button onclick="generateHealthProposal()" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg text-xs shadow-md transition flex items-center space-x-1.5">
+                        <span>✨ Generate Healthcare SOW Proposal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- AI RESPONSE BOX CONTAINER -->
+            <div id="aiHealthOutputContainer" class="mt-6 pt-5 border-t border-slate-700/80 hidden">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-ping"></span>
+                        <span id="aiHealthOutputTitle" class="text-xs font-bold uppercase tracking-wider text-teal-300">Healthcare AI Dossier Generated</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="copyHealthAiOutput()" class="px-3 py-1 bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs rounded border border-slate-600 font-medium transition flex items-center space-x-1">
+                            <span>📋 Copy Response</span>
+                        </button>
+                        <button onclick="clearHealthAiOutput()" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 text-xs rounded border border-slate-700 transition">
+                            ✕ Clear
+                        </button>
+                    </div>
+                </div>
+                <div id="aiHealthOutputContent" class="bg-slate-950/80 rounded-xl p-5 border border-slate-700 text-slate-200 text-xs ai-prose overflow-x-auto max-h-[500px] overflow-y-auto leading-relaxed shadow-inner"></div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="aiHealthLoading" class="mt-6 pt-6 border-t border-slate-700 text-center py-8 hidden">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-400 mb-3"></div>
+                <div class="text-sm font-bold text-slate-200">Consulting Gemini 2.5 Healthcare Solutions Model...</div>
+                <p class="text-xs text-slate-400 mt-1">Synthesizing clinical compliance (NABIDH/HIPAA), EMR architectures, and Vadodara offshore rates (<$25/hr)...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: HEALTHCARE EVENTS MASTER MATRIX -->
+        <section id="health-events" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <div class="border-b border-slate-100 pb-4 mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-900">Healthcare & MedTech Event Explorer (Sep 1 – Oct 10)</h2>
+                    <p class="text-sm text-slate-600 mt-0.5">Comprehensive breakdown of all verified healthcare, pharma, clinical, and medical aesthetic events taking place in Dubai.</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button id="viewGridBtn" onclick="switchHealthView('grid')" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-600 text-white shadow-sm">Grid View</button>
+                    <button id="viewTableBtn" onclick="switchHealthView('table')" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200">Table View</button>
+                </div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 p-3.5 rounded-lg border border-slate-200">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Medical Sub-Sector</label>
+                    <select id="subSectorFilter" onchange="applyHealthFilters()" class="w-full text-xs bg-white border border-slate-300 rounded-md px-2.5 py-1.5 focus:ring-2 focus:ring-brand-500">
+                        <option value="all">All Healthcare Sub-Sectors</option>
+                        <option value="Aesthetics">Aesthetics & Dermatology</option>
+                        <option value="Pharma">Pharma Tech & Clinical Supply</option>
+                        <option value="Digital Health">Digital Health & Oncology AI</option>
+                        <option value="Critical Care">Critical Care & Hospital IoT</option>
+                        <option value="Hospital Tech">Hospital Informatics & NABIDH</option>
+                        <option value="Dental">Dental & Practice Software</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Pass Cost Filter</label>
+                    <select id="costHealthFilter" onchange="applyHealthFilters()" class="w-full text-xs bg-white border border-slate-300 rounded-md px-2.5 py-1.5 focus:ring-2 focus:ring-brand-500">
+                        <option value="all">All Pass Types</option>
+                        <option value="free">Free Visitor Pass Available</option>
+                        <option value="paid">Paid Delegate Only</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Search Keywords</label>
+                    <input type="text" id="searchHealthInput" onkeyup="applyHealthFilters()" placeholder="e.g. Derma, Pharma, Telehealth, EMR, DWTC..." class="w-full text-xs bg-white border border-slate-300 rounded-md px-2.5 py-1.5 focus:ring-2 focus:ring-brand-500">
+                </div>
+            </div>
+
+            <!-- Events Grid -->
+            <div id="healthGridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Javascript will inject healthcare cards here -->
+            </div>
+
+            <!-- Events Table -->
+            <div id="healthTableContainer" class="hidden overflow-x-auto border border-slate-200 rounded-lg">
+                <table class="min-w-full divide-y divide-slate-200 text-left text-xs">
+                    <thead class="bg-slate-50 text-slate-700 font-semibold uppercase">
+                        <tr>
+                            <th class="px-4 py-3">Event Name</th>
+                            <th class="px-4 py-3">Dates</th>
+                            <th class="px-4 py-3">Exact Venue</th>
+                            <th class="px-4 py-3">Attendees</th>
+                            <th class="px-4 py-3">Primary Focus & AV DEVS Health Synergy</th>
+                            <th class="px-4 py-3">Format</th>
+                            <th class="px-4 py-3">Ticket Cost</th>
+                            <th class="px-4 py-3">DIC Travel (Taxi/Metro)</th>
+                            <th class="px-4 py-3 text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="healthTableBody" class="divide-y divide-slate-200 bg-white">
+                        <!-- Javascript will inject table rows -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 4: DIC HEALTHCARE LOGISTICS HUB & ANALYTICS -->
+        <section id="health-logistics" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <div class="border-b border-slate-100 pb-4 mb-6">
+                <h2 class="text-xl font-bold text-slate-900">Healthcare Travel Logistics & Venue Analytics</h2>
+                <p class="text-sm text-slate-600 mt-1">
+                    Route optimization and transit budgets from <strong>Dubai International City (DIC)</strong> to major Dubai medical conference hubs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- Left: Route Cost Calculator -->
+                <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-4">
+                    <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Medical Venue Route Calculator</h3>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Target Healthcare Venue</label>
+                        <select id="healthVenueSelect" onchange="calcHealthLogistics()" class="w-full text-xs bg-white border border-slate-300 rounded-md px-3 py-2 font-medium text-slate-800 focus:ring-2 focus:ring-brand-500">
+                            <option value="dwtc">DWTC (Sheikh Zayed Rd) - Dubai Derma & Hospital Tech</option>
+                            <option value="intercon">InterContinental Dubai Festival City - Precision Medicine Summit</option>
+                            <option value="habtoor">Hilton Dubai Al Habtoor City (Business Bay) - Critical Care Conf</option>
+                            <option value="lemeridien">Le Méridien Dubai Hotel & Conf Centre (Garhoud) - Pharmaconex</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Deploying Engineering / Sales Team</label>
+                        <div class="flex items-center space-x-3">
+                            <input type="range" id="healthTeamRange" min="1" max="5" value="2" oninput="calcHealthLogistics()" class="w-full accent-brand-600">
+                            <span id="healthTeamVal" class="text-sm font-bold text-brand-700 bg-brand-50 px-2.5 py-1 rounded border border-brand-200">2 Execs</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-200 pt-3 space-y-2.5 text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">DIC Transit Distance:</span>
+                            <span id="hDist" class="font-bold text-slate-800">22 km</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">Fastest Highway Corridor:</span>
+                            <span id="hHighway" class="font-bold text-slate-800">E44 (Ras Al Khor) / E11</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-slate-800">Taxi / Careem Transit</div>
+                                <div id="hTaxiTime" class="text-slate-500 text-[11px]">~25 mins direct</div>
+                            </div>
+                            <div class="text-right">
+                                <div id="hTaxiCost" class="text-sm font-extrabold text-brand-600">AED 65</div>
+                                <div id="hTaxiPerCapita" class="text-[10px] text-slate-400">AED 32.50 / head</div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-slate-800">Public Transit (Bus + Metro)</div>
+                                <div id="hMetroTime" class="text-slate-500 text-[11px]">~45–50 mins</div>
+                            </div>
+                            <div class="text-right">
+                                <div id="hMetroCost" class="text-sm font-extrabold text-emerald-600">AED 24</div>
+                                <div id="hMetroPerCapita" class="text-[10px] text-slate-400">AED 12.00 / head</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Chart Visualizing Healthcare Scale -->
+                <div class="lg:col-span-7 bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Healthcare Event Attendee Volume Comparison</h3>
+                    <div class="chart-container">
+                        <canvas id="healthScaleChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 mt-8">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p>© 2026 AV DEVS (Agile Vision Developers). Vadodara Technical Center | Dubai On-Site Deployment Team.</p>
+            <p class="text-slate-500">Dedicated Healthcare, MedTech & Digital Health Software Commercial Intelligence (Sep 1 – Oct 10).</p>
+        </div>
+    </footer>
+
+    <!-- HEALTH EVENT DETAIL MODAL -->
+    <div id="healthModal" class="fixed inset-0 bg-slate-900/60 modal-blur z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 p-6 relative">
+            <button onclick="closeHealthModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 font-bold text-lg">✕</button>
+            <div id="healthModalBody"></div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // MASTER HEALTHCARE EVENTS DATA (Sep 1 – Oct 10)
+        const healthcareEvents = [
+            {
+                id: 'dubai-derma',
+                name: 'Dubai Derma 2026 (Dubai World Dermatology & Laser Conference)',
+                dates: 'Sep 8–10',
+                venue: 'Dubai World Trade Centre (DWTC), Sheikh Zayed Rd',
+                venueCategory: 'dwtc',
+                subSector: 'Aesthetics',
+                attendees: '15,000+',
+                attendeeNum: 15000,
+                majorGoals: 'Showcase advanced dermatology, clinical aesthetics, laser systems, and surgical equipment. Hub for aesthetic clinics and med-spas across GCC.',
+                networkingVsSpeech: '60% Trade Exhibition Floor (B2B buyer/distributor matchmaking) + 40% Scientific Lectures and Clinical Workshops.',
+                costing: 'Exhibition/Visitor Pass: Free (pre-registration) / Onsite AED 150; Full Scientific Conference Pass: ~$450–$850 (AED 1,650–3,120).',
+                costCategory: 'free',
+                dicDistance: 22,
+                taxiCost: 'AED 55–75',
+                taxiTime: '~25 min',
+                metroCost: 'AED 10–12',
+                metroTime: '~45 min via Red Line',
+                avdevsSynergy: 'Highest',
+                pitchHook: 'Custom Tele-Dermatology mobile apps (Flutter), AI skin-analysis integration, before/after photo galleries, clinic CRMs & WhatsApp booking bots.',
+                description: 'Crucial target for AV DEVS. High-end private aesthetic and dermatology clinics in Dubai are rapidly modernizing their patient booking apps and seeking low-cost software development teams.'
+            },
+            {
+                id: 'pharmaconex',
+                name: 'Pharmaconex Middle East & CPhI Middle East',
+                dates: 'Sep 15–17',
+                venue: 'Le Méridien Dubai Hotel & Conference Centre, Airport Road, Garhoud',
+                venueCategory: 'lemeridien',
+                subSector: 'Pharma',
+                attendees: '4,500–6,000+',
+                attendeeNum: 5500,
+                majorGoals: 'Connect pharmaceutical manufacturers, active pharmaceutical ingredient (API) suppliers, packaging innovators, and digital pharma supply chain vendors.',
+                networkingVsSpeech: '70% B2B Supply Networking & Contract Manufacturing Deals; 30% Regulatory & Technical Keynotes.',
+                costing: 'Trade Visitor Pass: Free upon early registration; Delegate/Pharma Leadership Pass: ~$250–$600 (AED 920–2,200).',
+                costCategory: 'free',
+                dicDistance: 17,
+                taxiCost: 'AED 45–60',
+                taxiTime: '~20 min',
+                metroCost: 'AED 10.00',
+                metroTime: '~35 min (Airport Terminal 1 / GGICO station)',
+                avdevsSynergy: 'High',
+                pitchHook: 'Pharma supply-chain traceability portals, batch tracking dashboards, cloud E-Pedigree systems & Penetration Testing for pharma IP.',
+                description: 'Pharma distributors and contract manufacturers need custom web dashboards for cold-chain tracking, inventory ERP integrations, and regulatory compliance logging.'
+            },
+            {
+                id: 'precision-med',
+                name: 'Precision Medicine & Digital Oncology Summit Middle East',
+                dates: 'Sep 21–22',
+                venue: 'InterContinental Dubai Festival City, Event Centre',
+                venueCategory: 'intercon',
+                subSector: 'Digital Health',
+                attendees: '2,200+',
+                attendeeNum: 2200,
+                majorGoals: 'Advance AI in precision genomics, targeted cancer therapy, molecular diagnostics, and predictive clinical health informatics.',
+                networkingVsSpeech: '50% Scientific Keynotes & Clinical Research Panels; 50% Specialized MedTech & Biotech Executive Networking Lounges.',
+                costing: 'Academic/Clinical Delegate: AED 1,200; Commercial/Vendor Pass: AED 3,200 (~$870).',
+                costCategory: 'paid',
+                dicDistance: 16,
+                taxiCost: 'AED 40–55',
+                taxiTime: '~18 min (Direct via E44 / Business Bay Crossing)',
+                metroCost: 'AED 10–14',
+                metroTime: '~40 min (Metro to Creek + Taxi/Feeder)',
+                avdevsSynergy: 'High',
+                pitchHook: 'Python AI/ML diagnostic model integration, secure genomics data repositories, FHIR/HL7 compliant cloud pipelines & doctor web portals.',
+                description: 'Engage biotech startups and genomic research institutes seeking specialized Python data science developers and cloud engineers to build intuitive medical dashboards.'
+            },
+            {
+                id: 'critical-care',
+                name: 'Middle East Critical Care & Emergency Medicine Summit',
+                dates: 'Sep 27–29',
+                venue: 'Hilton Dubai Al Habtoor City, Business Bay',
+                venueCategory: 'habtoor',
+                subSector: 'Critical Care',
+                attendees: '3,000+',
+                attendeeNum: 3000,
+                majorGoals: 'Focus on emergency response protocols, intensive care telemetry, real-time vital monitoring, and medical device hardware-software integration.',
+                networkingVsSpeech: '60% Technical Clinical Presentations & Simulation Labs; 40% Medical Equipment Expo & Hospital Buyer Networking.',
+                costing: 'Doctor/Clinician Pass: AED 1,500; Trade/Vendor Visitor: AED 750 (Free for pre-qualified hospital procurement).',
+                costCategory: 'paid',
+                dicDistance: 25,
+                taxiCost: 'AED 65–85',
+                taxiTime: '~30 min (via E44 Ras Al Khor)',
+                metroCost: 'AED 15–18',
+                metroTime: '~50 min (Red line to Business Bay station)',
+                avdevsSynergy: 'Medium',
+                pitchHook: 'Real-time telemetry IoT dashboards (Node.js/WebSockets), emergency ambulance dispatch web interfaces & mobile triage apps.',
+                description: 'Emergency healthcare software vendors require high-availability, low-latency web interfaces and mobile alerting applications.'
+            },
+            {
+                id: 'hospital-tech',
+                name: 'GCC Healthcare Innovation & Hospital Tech Congress',
+                dates: 'Oct 4–6',
+                venue: 'Dubai World Trade Centre (DWTC) - Al Multaqua Hall',
+                venueCategory: 'dwtc',
+                subSector: 'Hospital Tech',
+                attendees: '5,000+',
+                attendeeNum: 5000,
+                majorGoals: 'Drive digital transformation in GCC hospitals: NABIDH & Malaffi HIE integrations, smart hospital IoT, AI triage, and EHR modernization.',
+                networkingVsSpeech: 'Strong B2B Networking (Hospital CIOs, Health Authority Officers, HealthTech founders) alongside digital health keynote tracks.',
+                costing: 'Hospital & Healthcare Provider IT Staff: Free VIP registration; Tech Vendor / Supplier Pass: AED 1,850 ($500).',
+                costCategory: 'free',
+                dicDistance: 22,
+                taxiCost: 'AED 55–75',
+                taxiTime: '~25 min',
+                metroCost: 'AED 10–12',
+                metroTime: '~45 min via Metro',
+                avdevsSynergy: 'Highest',
+                pitchHook: 'NABIDH/Malaffi compliance consulting, custom EHR/EMR middleware, patient portal web apps & Penetration Testing for hospital records.',
+                description: 'Prime target for AV DEVS dedicated developer teams (<$25/hr). Hospital IT directors actively seek external dev capacity to integrate legacy hospital systems with modern cloud APIs.'
+            },
+            {
+                id: 'dental-expo',
+                name: 'Middle East Dental & Aesthetic Practice Expo',
+                dates: 'Oct 7–8',
+                venue: 'Dubai World Trade Centre (DWTC) - Sheikh Saeed Halls',
+                venueCategory: 'dwtc',
+                subSector: 'Dental',
+                attendees: '4,000+',
+                attendeeNum: 4000,
+                majorGoals: 'Showcase dental clinic management software, 3D imaging equipment, orthodontics CAD/CAM, and clinic customer retention tools.',
+                networkingVsSpeech: '70% Trade Exhibition Floor & Practice Demos; 30% CME Accredited Clinical Workshops.',
+                costing: 'Trade/Visitor Pass: Free (pre-registration); CME Workshop Pass: AED 450–900.',
+                costCategory: 'free',
+                dicDistance: 22,
+                taxiCost: 'AED 55–75',
+                taxiTime: '~25 min',
+                metroCost: 'AED 10–12',
+                metroTime: '~45 min via Metro',
+                avdevsSynergy: 'High',
+                pitchHook: 'Dental practice management SaaS, appointment booking mobile apps, 3D dental scan viewers (Three.js/WebGL) & clinic digital marketing.',
+                description: 'Dental chains across Dubai and UAE seek branded mobile apps for patient loyalty, treatment financing calculators, and automated reminder integrations.'
+            }
+        ];
+
+        let currentHealthView = 'grid';
+
+        // ==========================================
+        // GEMINI 2.5 API INTEGRATION
+        // ==========================================
+        const apiKey = ""; // Provided at runtime by environment
+
+        async function callGemini(prompt, systemInstruction = "") {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }]
+            };
+            if (systemInstruction) {
+                payload.systemInstruction = { parts: [{ text: systemInstruction }] };
+            }
+
+            const delays = [1000, 2000, 4000, 8000, 16000];
+            for (let attempt = 0; attempt <= 5; attempt++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+                    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (!text) throw new Error("Empty response from AI engine.");
+                    return text;
+                } catch (error) {
+                    if (attempt === 5) throw new Error("Unable to connect to Gemini after 5 attempts. Please check network.");
+                    await new Promise(res => setTimeout(res, delays[attempt]));
+                }
+            }
+        }
+
+        function formatMarkdown(text) {
+            let html = text
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^# (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
+                .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+                .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+                .replace(/^\s*[-•]\s*(.*$)/gim, '<li>$1</li>')
+                .replace(/\n\n/gim, '</p><p>')
+                .replace(/\n/gim, '<br>');
+
+            html = html.replace(/(<li>[\s\S]*?<\/li>)/gm, '<ul>$1</ul>');
+            html = html.replace(/<\/ul>\s*<ul>/gm, '');
+            return '<p>' + html + '</p>';
+        }
+
+        const AV_DEVS_HEALTH_SYSTEM_PROMPT = `You are the Lead Healthcare Solutions Architect and Commercial Director for AV DEVS (Agile Vision Developers, https://avdevs.com/).
+AV DEVS Healthcare Profile:
+- 140+ engineers based in Vadodara, India with local deployment in Dubai International City (DIC).
+- Core Healthcare Offerings: HIPAA & NABIDH compliant architectures, Telehealth video apps (Flutter/React Native), Custom EHR/EMR connectors (HL7/FHIR), Clinic CRM portals, Medical IoT dashboards, and Penetration Testing / Cybersecurity for electronic medical records.
+- Rates: Dedicated agile developers at <$25/hour (delivering up to 70% cost savings for UAE hospital & clinic operators vs local agency rates).
+- Tone: Highly knowledgeable on GCC health compliance (NABIDH, Malaffi, DHA guidelines), articulate, executive, and solution-focused.`;
+
+        function switchHealthTab(tab) {
+            document.getElementById('healthTabPitch').classList.add('hidden');
+            document.getElementById('healthTabProposal').classList.add('hidden');
+            document.getElementById('tabBtnHealthPitch').className = "px-3 py-1.5 rounded-md font-semibold text-slate-300 hover:text-white transition";
+            document.getElementById('tabBtnHealthProposal').className = "px-3 py-1.5 rounded-md font-semibold text-slate-300 hover:text-white transition";
+
+            if (tab === 'pitch') {
+                document.getElementById('healthTabPitch').classList.remove('hidden');
+                document.getElementById('tabBtnHealthPitch').className = "px-3 py-1.5 rounded-md font-semibold bg-brand-600 text-white shadow-sm transition";
+            } else {
+                document.getElementById('healthTabProposal').classList.remove('hidden');
+                document.getElementById('tabBtnHealthProposal').className = "px-3 py-1.5 rounded-md font-semibold bg-brand-600 text-white shadow-sm transition";
+            }
+        }
+
+        function showHealthAiLoading(show) {
+            const loader = document.getElementById('aiHealthLoading');
+            const output = document.getElementById('aiHealthOutputContainer');
+            if (show) {
+                loader.classList.remove('hidden');
+                output.classList.add('hidden');
+            } else {
+                loader.classList.add('hidden');
+                output.classList.remove('hidden');
+            }
+        }
+
+        async function generateHealthBattlecard() {
+            const eventVal = document.getElementById('aiHealthEventSelect').value;
+            const prospect = document.getElementById('aiHealthProspect').value;
+            const persona = document.getElementById('aiHealthPersona').value;
+
+            showHealthAiLoading(true);
+
+            const prompt = `Generate an on-the-floor Healthcare Sales Battlecard for AV DEVS in Dubai.
+Target Event: ${eventVal}
+Prospect Profile: ${prospect}
+Healthcare Stakeholder: ${persona}
+
+Structure response into:
+1. ### 🩺 30-Second Clinical Opening Hook (Focusing on patient UX, NABIDH/HIPAA compliance & <$25/hr rate)
+2. ### 🔍 3 Diagnostic Clinical/IT Discovery Questions
+3. ### 🛡️ Handling 3 Healthcare Objections (Data privacy in cloud, doctor adoption friction, local vs offshore Vadodara team)
+4. ### 💡 Proposed Low-Risk Healthcare Sprint Pilot & Architecture
+5. ### 📧 Same-Day Follow-Up Message (WhatsApp/Email template for busy medical directors)`;
+
+            try {
+                const response = await callGemini(prompt, AV_DEVS_HEALTH_SYSTEM_PROMPT);
+                document.getElementById('aiHealthOutputTitle').innerText = `✨ Healthcare Battlecard: ${prospect}`;
+                document.getElementById('aiHealthOutputContent').innerHTML = formatMarkdown(response);
+                showHealthAiLoading(false);
+            } catch (err) {
+                showHealthAiLoading(false);
+                document.getElementById('aiHealthOutputContainer').classList.remove('hidden');
+                document.getElementById('aiHealthOutputContent').innerHTML = `<p class="text-rose-400 font-semibold">${err.message}</p>`;
+            }
+        }
+
+        async function generateHealthProposal() {
+            const client = document.getElementById('aiHealthClient').value;
+            const scope = document.getElementById('aiHealthScope').value;
+            const pod = document.getElementById('aiHealthPod').value;
+            const notes = document.getElementById('aiHealthNotes').value;
+
+            showHealthAiLoading(true);
+
+            const prompt = `Convert the following medical conference discussion into a formal Healthcare Scope of Work (SOW) Brief and Follow-Up Email for AV DEVS:
+Client & Facility: ${client}
+Target Scope: ${scope}
+Resourcing Pod: ${pod}
+Meeting Notes: "${notes}"
+
+Structure into:
+1. ### 🏥 Executive Clinical Discovery Summary
+2. ### 🔒 Compliance & Architecture Strategy (HIPAA / NABIDH / Data Encryption)
+3. ### 👥 Dedicated Developer Pod Sizing & Cost Analysis (<$25/hr vs regional agency savings)
+4. ### ⏱️ 4-Phase Delivery Roadmap (HIPAA Blueprint -> Sprint 1-2 MVP -> Pen Test -> Clinical Rollout)
+5. ### ✉️ Formal Executive Follow-Up Proposal Email`;
+
+            try {
+                const response = await callGemini(prompt, AV_DEVS_HEALTH_SYSTEM_PROMPT);
+                document.getElementById('aiHealthOutputTitle').innerText = `✨ Healthcare SOW: ${client}`;
+                document.getElementById('aiHealthOutputContent').innerHTML = formatMarkdown(response);
+                showHealthAiLoading(false);
+            } catch (err) {
+                showHealthAiLoading(false);
+                document.getElementById('aiHealthOutputContainer').classList.remove('hidden');
+                document.getElementById('aiHealthOutputContent').innerHTML = `<p class="text-rose-400 font-semibold">${err.message}</p>`;
+            }
+        }
+
+        function copyHealthAiOutput() {
+            const text = document.getElementById('aiHealthOutputContent').innerText;
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            showToast("Copied to clipboard!");
+        }
+
+        function clearHealthAiOutput() {
+            document.getElementById('aiHealthOutputContainer').classList.add('hidden');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // ==========================================
+        // UI RENDERING & FILTERING
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            renderHealthcareEvents(healthcareEvents);
+            initHealthChart();
+            calcHealthLogistics();
+        });
+
+        function switchHealthView(view) {
+            currentHealthView = view;
+            const grid = document.getElementById('healthGridContainer');
+            const table = document.getElementById('healthTableContainer');
+            const gBtn = document.getElementById('viewGridBtn');
+            const tBtn = document.getElementById('viewTableBtn');
+
+            if (view === 'grid') {
+                grid.classList.remove('hidden');
+                table.classList.add('hidden');
+                gBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-600 text-white shadow-sm";
+                tBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200";
+            } else {
+                grid.classList.add('hidden');
+                table.classList.remove('hidden');
+                tBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-600 text-white shadow-sm";
+                gBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200";
+            }
+        }
+
+        function applyHealthFilters() {
+            const sub = document.getElementById('subSectorFilter').value;
+            const cost = document.getElementById('costHealthFilter').value;
+            const search = document.getElementById('searchHealthInput').value.toLowerCase().trim();
+
+            const filtered = healthcareEvents.filter(e => {
+                const mSub = (sub === 'all') || (e.subSector === sub);
+                const mCost = (cost === 'all') || (e.costCategory === cost);
+                const mSearch = search === '' || 
+                    e.name.toLowerCase().includes(search) || 
+                    e.venue.toLowerCase().includes(search) || 
+                    e.pitchHook.toLowerCase().includes(search) ||
+                    e.majorGoals.toLowerCase().includes(search);
+
+                return mSub && mCost && mSearch;
+            });
+
+            renderHealthcareEvents(filtered);
+        }
+
+        function renderHealthcareEvents(data) {
+            const grid = document.getElementById('healthGridContainer');
+            const tableBody = document.getElementById('healthTableBody');
+            grid.innerHTML = '';
+            tableBody.innerHTML = '';
+
+            data.forEach(e => {
+                const costBadge = e.costCategory === 'free'
+                    ? '<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded border border-emerald-200 text-[10px] font-semibold">Free Visitor Option</span>'
+                    : '<span class="px-2 py-0.5 bg-amber-50 text-amber-700 rounded border border-amber-200 text-[10px] font-semibold">Paid Delegate Pass</span>';
+
+                // Grid Card
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-xl border border-slate-200 p-5 flex flex-col justify-between hover:shadow-md transition';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-2">
+                            <span class="text-xs font-bold text-teal-800 bg-teal-50 px-2 py-0.5 rounded border border-teal-200">${e.dates}</span>
+                            <span class="px-2 py-0.5 rounded border text-[10px] uppercase font-bold bg-teal-100 text-teal-800 border-teal-300">Synergy: ${e.avdevsSynergy}</span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 leading-snug cursor-pointer hover:text-brand-600 transition" onclick="openHealthModal('${e.id}')">${e.name}</h3>
+                        <p class="text-xs text-slate-500 mt-1">📍 ${e.venue}</p>
+
+                        <div class="mt-3 pt-3 border-t border-slate-100 space-y-2 text-xs">
+                            <div>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Major Goal & Scope</span>
+                                <p class="text-slate-700 mt-0.5 line-clamp-2">${e.majorGoals}</p>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-500 pt-1">
+                                <span>👥 Attendees: <strong>${e.attendees}</strong></span>
+                                <span>${costBadge}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-1">
+                        <button onclick="launchHealthAi('${e.id}')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded text-xs shadow-sm flex items-center space-x-1">
+                            <span>✨ AI Battlecard</span>
+                        </button>
+                        <button onclick="openHealthModal('${e.id}')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded text-xs border border-slate-300">
+                            Full Dossier →
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+
+                // Table Row
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50 transition';
+                tr.innerHTML = `
+                    <td class="px-4 py-3 font-bold text-slate-900 cursor-pointer hover:text-brand-600" onclick="openHealthModal('${e.id}')">${e.name}</td>
+                    <td class="px-4 py-3 text-slate-600">${e.dates}</td>
+                    <td class="px-4 py-3 text-slate-600">${e.venue}</td>
+                    <td class="px-4 py-3 font-semibold text-slate-800">${e.attendees}</td>
+                    <td class="px-4 py-3 text-slate-700 max-w-xs">${e.pitchHook}</td>
+                    <td class="px-4 py-3 text-slate-600">${e.networkingVsSpeech.split(';')[0]}</td>
+                    <td class="px-4 py-3">${costBadge}</td>
+                    <td class="px-4 py-3 text-slate-600">${e.dicDistance} km (${e.taxiCost})</td>
+                    <td class="px-4 py-3 text-right space-x-1">
+                        <button onclick="launchHealthAi('${e.id}')" class="px-2 py-1 bg-teal-600 text-white font-bold rounded text-[10px]">✨ AI</button>
+                        <button onclick="openHealthModal('${e.id}')" class="px-2 py-1 bg-slate-200 text-slate-700 font-bold rounded text-[10px]">View</button>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        function launchHealthAi(id) {
+            const event = healthcareEvents.find(e => e.id === id);
+            if (!event) return;
+            document.getElementById('ai-health-copilot').scrollIntoView({ behavior: 'smooth' });
+            switchHealthTab('pitch');
+            document.getElementById('aiHealthProspect').value = `Healthcare Provider attending ${event.name} needing ${event.pitchHook}`;
+            generateHealthBattlecard();
+        }
+
+        function openHealthModal(id) {
+            const event = healthcareEvents.find(e => e.id === id);
+            if (!event) return;
+
+            const modalBody = document.getElementById('healthModalBody');
+            modalBody.innerHTML = `
+                <div class="border-b border-slate-100 pb-3 mb-4">
+                    <span class="text-xs font-bold text-brand-700 bg-teal-50 px-2 py-0.5 rounded border border-teal-200">${event.dates}</span>
+                    <h2 class="text-xl font-extrabold text-slate-900 mt-1">${event.name}</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">📍 ${event.venue} (${event.dicDistance} km from Dubai International City)</p>
+                </div>
+
+                <div class="space-y-4 text-xs text-slate-700">
+                    <div>
+                        <span class="font-bold text-slate-900 block mb-1">Major Goal & Scope:</span>
+                        <p class="text-slate-600 leading-relaxed">${event.majorGoals}</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <div>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase">Estimated Attendees</span>
+                            <div class="font-extrabold text-slate-800 text-sm">${event.attendees}</div>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase">AV DEVS Synergy</span>
+                            <div class="font-extrabold text-teal-700 text-sm">${event.avdevsSynergy} Match</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-slate-900 block mb-1">Networking Dynamic vs Keynotes:</span>
+                        <p class="text-slate-600">${event.networkingVsSpeech}</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-slate-900 block mb-1">Pass Costing & Ticketing:</span>
+                        <p class="text-slate-600">${event.costing}</p>
+                    </div>
+
+                    <div class="p-3 bg-teal-50 border-l-4 border-brand-600 text-teal-900 font-medium rounded-r">
+                        💡 <strong>AV DEVS Pitch Strategy:</strong> ${event.pitchHook}
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-slate-900 block mb-1">DIC Route & Transit Details:</span>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>• <strong>Taxi / Careem from DIC:</strong> ${event.taxiCost} (${event.taxiTime})</li>
+                            <li>• <strong>RTA Public Metro Route:</strong> ${event.metroCost} (${event.metroTime})</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <button onclick="closeHealthModal(); launchHealthAi('${event.id}');" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded text-xs shadow transition flex items-center space-x-1.5">
+                        <span>✨ Generate Healthcare Battlecard</span>
+                    </button>
+                    <button onclick="closeHealthModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded text-xs">Close</button>
+                </div>
+            `;
+            document.getElementById('healthModal').classList.remove('hidden');
+        }
+
+        function closeHealthModal() {
+            document.getElementById('healthModal').classList.add('hidden');
+        }
+
+        function calcHealthLogistics() {
+            const venue = document.getElementById('healthVenueSelect').value;
+            const team = parseInt(document.getElementById('healthTeamRange').value);
+            document.getElementById('healthTeamVal').innerText = `${team} ${team > 1 ? 'Execs' : 'Exec'}`;
+
+            let dist = 22;
+            let highway = "E44 (Ras Al Khor) / E11";
+            let taxi = 65;
+            let time = "~25 mins";
+            let metro = 12;
+
+            if (venue === 'intercon') {
+                dist = 16;
+                highway = "E44 (Ras Al Khor) → Festival City";
+                taxi = 48;
+                time = "~18 mins";
+                metro = 10;
+            } else if (venue === 'habtoor') {
+                dist = 25;
+                highway = "E44 → Al Khail / Business Bay";
+                taxi = 75;
+                time = "~30 mins";
+                metro = 15;
+            } else if (venue === 'lemeridien') {
+                dist = 17;
+                highway = "E11 / Airport Road Garhoud";
+                taxi = 52;
+                time = "~20 mins";
+                metro = 10;
+            }
+
+            document.getElementById('hDist').innerText = `${dist} km`;
+            document.getElementById('hHighway').innerText = highway;
+            document.getElementById('hTaxiTime').innerText = `${time} direct from DIC`;
+            document.getElementById('hTaxiCost').innerText = `AED ${taxi}`;
+            document.getElementById('hTaxiPerCapita').innerText = `AED ${(taxi/team).toFixed(2)} / head`;
+            document.getElementById('hMetroCost').innerText = `AED ${metro * team}`;
+            document.getElementById('hMetroPerCapita').innerText = `AED ${metro.toFixed(2)} / head`;
+        }
+
+        function initHealthChart() {
+            const ctx = document.getElementById('healthScaleChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Dubai Derma', 'Pharmaconex', 'Precision Med', 'Critical Care', 'Hospital Tech', 'Dental Expo'],
+                    datasets: [{
+                        label: 'Projected Medical Attendees',
+                        data: [15000, 5500, 2200, 3000, 5000, 4000],
+                        backgroundColor: ['#0d9488', '#14b8a6', '#0284c7', '#3b82f6', '#0f766e', '#06b6d4'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => `${ctx.raw.toLocaleString()} Healthcare Delegates`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Attendees', font: { size: 10 } }
+                        },
+                        x: {
+                            ticks: { font: { size: 10 } }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
